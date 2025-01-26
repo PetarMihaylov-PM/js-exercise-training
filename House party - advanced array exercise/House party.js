@@ -1,28 +1,35 @@
-function solve(array){
-  
+function solve(array) {
+ let guestList = new Set();
 
-  for(let i = 0; i < array.length; i++){
-    let isGoing = array[i].includes('is going!') ? true : false;
-    let name = array[i].split(' ')[0];
-    let isInTheList = false;
 
-    for(let y = i + 1; y < array.length; y++){
-      let campareNames = array[y].split(' ')[0];
-      if(name === campareNames){
-        isInTheList = true;
-      }
-      if(isInTheList && isGoing){
+  array.forEach(element => {
+    let name = element.split(' is ')[0];
+    let action = element.split(' is ')[1];
+
+    if(action === 'going!'){
+      if(guestList.has(name)){
         console.log(`${name} is already in the list!`);
+      } else{
+        guestList.add(name);
       }
-      if(isInTheList && !isGoing){
-        
+    } else if(action === 'not going!'){
+      if(guestList.has(name)){
+        guestList.delete(name);
+      } else{
+        console.log(`${name} is not in the list!`);
       }
     }
-  }
+  });
+
+  guestList.forEach(guest => {
+    console.log(guest);
+  })
 }
 
-solve(['Allie is going!',
-  'George is going!',
-  'John is not going!',
-  'George is not going!']
+solve(['Tom is going!',
+  'Annie is going!',
+  'Tom is going!',
+  'Garry is going!',
+  'Jerry is going!']
+  
   )
