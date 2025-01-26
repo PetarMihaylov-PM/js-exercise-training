@@ -31,5 +31,4 @@ solve(['Tom is going!',
   'Tom is going!',
   'Garry is going!',
   'Jerry is going!']
-  
   )
