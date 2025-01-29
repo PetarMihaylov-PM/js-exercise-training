@@ -9,5 +9,8 @@
   width: 400px;
 }
 .video-author, .video-stats{
+  
+}
+.text{
   display: inline-block;
 }
