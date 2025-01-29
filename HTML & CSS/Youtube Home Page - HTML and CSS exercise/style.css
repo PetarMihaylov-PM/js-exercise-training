@@ -1,6 +1,13 @@
-.thumbnail-tabletennis{
+.thumbnail{
   width: 300px;
+  display: block;
 }
-.search{
+.search-box{
 
+}
+.video-title{
+  width: 400px;
+}
+.video-author, .video-stats{
+  display: inline-block;
 }
