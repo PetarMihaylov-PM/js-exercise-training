@@ -1,5 +1,5 @@
 body{
-  background-color: rgb(90, 83, 94);
+  background-color: rgb(77, 107, 137);
 }
 img{
   width: 200px;
@@ -18,7 +18,7 @@ p{
   min-width: 700px;
 }
 .container{
-  border: 2px solid;
+  border: 1.5px solid rgb(77, 107, 137);
   padding-left: 20px;
   padding-top: 20px;
   padding-bottom: 20px;
