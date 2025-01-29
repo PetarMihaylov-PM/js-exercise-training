@@ -2,15 +2,23 @@
   width: 300px;
   display: block;
 }
-.search-box{
+.search-bar{
+  display: block;
+}
 
-}
-.video-title{
-  width: 400px;
-}
 .video-author, .video-stats{
   
 }
-.text{
+.video-preview{
+  margin-right: 15px;
+  width: 300px;
   display: inline-block;
+  vertical-align: top;
+}
+.test{
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  color: transparent;
+  border-radius: 50px;
 }
