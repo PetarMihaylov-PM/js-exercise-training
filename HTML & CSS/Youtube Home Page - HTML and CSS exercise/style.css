@@ -56,3 +56,8 @@ p {
   margin-bottom: 4px;
 }
 
+.video-info-grid {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+}
+
