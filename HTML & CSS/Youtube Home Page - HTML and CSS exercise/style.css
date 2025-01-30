@@ -1,41 +1,52 @@
 p {
   font-family: Roboto, Arial;
 }
+
 .thumbnail {
   width: 300px;
   display: block;
 }
+
 .search-bar {
   display: block;
 }
+
 .video-title {
   margin-top: 0;
   font-size: 14px;
   font-weight: 500;
   line-height: 20px;
 }
+
 .video-preview {
   margin-right: 15px;
   width: 300px;
   display: inline-block;
   vertical-align: top;
 }
+
 .channel-img {
   display: inline-block;
-  width: 40px;
+  width: 50px;
   vertical-align: top;
 }
+
 .video-info {
   display: inline-block;
   width: 200px;
 }
+
 .profile-img {
-  width: 100%;
+  width: 40px;
   border-radius: 50px;
 }
+
 .thumbnail-row {
   margin-bottom: 12px;
 }
-.video-author {
 
+.video-author, .video-stats {
+  font-size: 12px;
+  color: rgb(96, 96, 96);
 }
+
