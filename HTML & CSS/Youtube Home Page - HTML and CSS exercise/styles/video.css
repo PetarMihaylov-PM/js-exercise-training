@@ -1,15 +1,5 @@
-p {
-  font-family: Roboto, Arial;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
 .thumbnail {
   width: 100%;
-}
-
-.search-bar {
-  display: block;
 }
 
 .video-title {
@@ -19,7 +9,6 @@ p {
   line-height: 20px;
   margin-bottom: 12px;
 }
-
 
 .video-grid{
   display: grid;
