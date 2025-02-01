@@ -5,15 +5,18 @@
   left: 0;
   bottom: 0;
   width: 72px;
+  z-index: 200;
+  padding-top: 5px;
 }
 
 .sidebar-link {
   background-color: white;
-  height: 76px;
+  height: 74px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  cursor: pointer;
 }
 
 .sidebar-link:hover {
@@ -22,6 +25,7 @@
 
 .sidebar-link img {
   height: 24px;
+  margin-bottom: 5px;
 }
 
 .sidebar-link div {
