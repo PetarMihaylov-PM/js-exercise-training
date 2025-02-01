@@ -6,3 +6,16 @@
   bottom: 0;
   width: 72px;
 }
+
+.sidebar-link {
+  background-color: white;
+  height: 76px;
+}
+
+.sidebar-link:hover {
+  background-color: rgb(237, 237, 237);
+}
+
+.sidebar-link img {
+  height: 24px;
+}
