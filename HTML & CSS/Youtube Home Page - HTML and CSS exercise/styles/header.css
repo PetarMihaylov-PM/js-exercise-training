@@ -46,6 +46,25 @@
   border: 1px solid rgb(216, 216, 216);
   margin-left: -1px;
   margin-right: 10px;
+  position: relative;
+  cursor: pointer;
+}
+
+.search-button div {
+  position: absolute;
+  bottom: -27px;
+  background-color: rgba(0, 0, 0, 0.444);
+  color: white;
+  border-radius: 2px;
+  padding: 5px 8px;
+  font-size: 12px;
+  opacity: 0;
+  transition: opacity 0.15s;
+  pointer-events: none;
+}
+
+.search-button:hover div {
+  opacity: 1;
 }
 
 .search-icon {
@@ -61,6 +80,7 @@
   border-radius: 20px;
   border: none;
   background-color: rgb(240, 240 ,240);
+  cursor: pointer;
 }
 
 .voice-search-icon {
@@ -94,23 +114,28 @@
 
 .upload-icon {
   height: 24px;
+  cursor: pointer;
 }
 
 .app-icon {
   height: 24px;
+  cursor: pointer;
 }
 
 .notification-icon {
   height: 24px;
+  cursor: pointer;
 }
 
 .current-user-picture{
   height: 32px;
   border-radius: 50px;
+  cursor: pointer;
 }
 
 .notification-icon-container {
   position: relative;
+  cursor: pointer;
 }
 
 .notifications-count {
