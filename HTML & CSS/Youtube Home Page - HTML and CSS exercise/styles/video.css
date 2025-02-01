@@ -24,6 +24,7 @@
 
 .thumbnail-row {
   margin-bottom: 12px;
+  position: relative;
 }
 
 .video-author, .video-stats {
@@ -37,5 +38,18 @@
 .video-info-grid {
   display: grid;
   grid-template-columns: 50px 1fr;
+}
+
+.video-time {
+  font-family: Roboto, Arial;
+  font-weight: 500;
+  background-color: black;
+  color: white;
+  position: absolute;
+  right: 8px;
+  bottom: 5px;
+  font-size: 12px;
+  padding: 4px 4px;
+  border-radius: 2px;
 }
 
