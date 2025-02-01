@@ -10,6 +10,10 @@
 .sidebar-link {
   background-color: white;
   height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .sidebar-link:hover {
@@ -18,4 +22,9 @@
 
 .sidebar-link img {
   height: 24px;
+}
+
+.sidebar-link div {
+  font-family: Roboto, Arial;
+  font-size: 10px;
 }
