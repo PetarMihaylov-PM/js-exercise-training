@@ -43,11 +43,11 @@
 .video-time {
   font-family: Roboto, Arial;
   font-weight: 500;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.814);
   color: white;
   position: absolute;
   right: 8px;
-  bottom: 5px;
+  bottom: 8px;
   font-size: 12px;
   padding: 4px 4px;
   border-radius: 2px;
