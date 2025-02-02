@@ -51,6 +51,7 @@
 }
 
 .search-button div {
+  font-family: Roboto, Arial;
   position: absolute;
   bottom: -27px;
   background-color: rgba(0, 0, 0, 0.444);
@@ -85,6 +86,7 @@
 }
 
 .voice-search-button div {
+  font-family: Roboto, Arial;
   position: absolute;
   white-space: nowrap;
   padding: 5px 8px;
@@ -144,6 +146,7 @@
 }
 
 .upload-icon-container div {
+  font-family: Roboto, Arial;
   position: absolute;
   bottom: -35px;
   background-color: rgba(0, 0, 0, 0.444);
@@ -173,13 +176,14 @@
 }
 
 .app-icon-container div {
+  font-family: Roboto, Arial;
   position: absolute;
   white-space: nowrap;
   bottom: -35px;
   background-color: rgba(0, 0, 0, 0.444);
   color: white;
   font-size: 12px;
-  padding: 4px;
+  padding: 4px 6px;
   border-radius: 2px;
   opacity: 0;
   pointer-events: none;
@@ -223,6 +227,7 @@
 }
 
 .hover-text {
+  font-family: Roboto, Arial;
   position: absolute;
   align-items: center;
   justify-content: center;
@@ -230,7 +235,7 @@
   background-color: rgba(0, 0, 0, 0.444);
   color: white;
   border-radius: 2px;
-  padding: 4px 5px;
+  padding: 4px 6px;
   bottom: -35px;
   right: -24px;
   opacity: 0;
