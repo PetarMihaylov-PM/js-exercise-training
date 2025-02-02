@@ -109,6 +109,7 @@
 }
 
 .search-bar {
+  font-family: Roboto, Arial;
   flex: 1;
   height: 36px;
   padding-left: 10px;
@@ -117,6 +118,7 @@
   border-radius: 2px;
   box-shadow: inset 1px 2px 3px rgba(0, 0, 0, 0.04);
   width: 0;
+  outline: none
 }
 
 .search-bar::placeholder{
