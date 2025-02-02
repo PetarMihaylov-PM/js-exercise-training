@@ -81,6 +81,12 @@
   border: none;
   background-color: rgb(240, 240 ,240);
   cursor: pointer;
+  position: relative;
+  cursor: pointer;
+}
+
+.voice-search-button div {
+
 }
 
 .voice-search-icon {
