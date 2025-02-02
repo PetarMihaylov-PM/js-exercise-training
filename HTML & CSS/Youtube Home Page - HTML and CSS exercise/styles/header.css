@@ -202,6 +202,7 @@
 }
 
 .notification-icon-container {
+  display: flex;
   position: relative;
   cursor: pointer;
 }
@@ -219,4 +220,23 @@
   padding-bottom: 2px;
   padding-right: 5px;
   border-radius: 10px;
+}
+
+.hover-text {
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  background-color: rgba(0, 0, 0, 0.444);
+  color: white;
+  border-radius: 2px;
+  padding: 4px 5px;
+  bottom: -35px;
+  right: -24px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.notification-icon-container:hover .hover-text {
+  opacity: 1;
 }
