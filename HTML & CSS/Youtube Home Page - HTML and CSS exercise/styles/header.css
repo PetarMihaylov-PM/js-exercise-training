@@ -165,6 +165,31 @@
   cursor: pointer;
 }
 
+.app-icon-container {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+
+.app-icon-container div {
+  position: absolute;
+  width: 70px;
+  bottom: -35px;
+  background-color: rgba(0, 0, 0, 0.444);
+  color: white;
+  font-size: 12px;
+  padding: 4px;
+  border-radius: 2px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s;
+}
+
+.app-icon-container:hover div {
+  opacity: 1;
+}
+
 .notification-icon {
   height: 24px;
   cursor: pointer;
