@@ -86,7 +86,21 @@
 }
 
 .voice-search-button div {
+  position: absolute;
+  width: 120px;
+  padding: 5px 8px;
+  bottom: -27px;
+  background-color: rgba(0, 0, 0, 0.444);
+  color: white;
+  border-radius: 2px;
+  font-size: 12px;
+  opacity: 1;
+  transition: opacity 0.15s;
+  pointer-events: none;
+}
 
+.voice-search-button:hover div {
+  opacity: 1;
 }
 
 .voice-search-icon {
@@ -121,6 +135,18 @@
 .upload-icon {
   height: 24px;
   cursor: pointer;
+}
+
+.upload-icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.upload-icon-container div {
+  position: absolute;
+  bottom: -27px;
 }
 
 .app-icon {
