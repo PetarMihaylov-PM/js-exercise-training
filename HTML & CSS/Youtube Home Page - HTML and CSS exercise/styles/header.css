@@ -86,7 +86,7 @@
 
 .voice-search-button div {
   position: absolute;
-  width: 120px;
+  white-space: nowrap;
   padding: 5px 8px;
   bottom: -27px;
   background-color: rgba(0, 0, 0, 0.444);
@@ -174,7 +174,7 @@
 
 .app-icon-container div {
   position: absolute;
-  width: 70px;
+  white-space: nowrap;
   bottom: -35px;
   background-color: rgba(0, 0, 0, 0.444);
   color: white;
