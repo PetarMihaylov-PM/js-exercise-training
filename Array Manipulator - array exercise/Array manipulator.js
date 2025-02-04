@@ -14,7 +14,10 @@ function solve(array, commands) {
       array.splice(index, 0, element);
     }
     else if (execute === 'addMany'){
-      
+      let index = command.split(' ').splice(1, 1);
+      let elements = command.split(' ').splice(2, command.length);
+
+      array.splice(index, 0, elements)
     }
 
     command = commands[i].split(' ')[0];
