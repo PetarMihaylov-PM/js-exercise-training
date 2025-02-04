@@ -24,24 +24,14 @@ function solve(array, commands) {
     }
 
     else if (execute === 'contains') {
-      
       let number = command.split(' ')[1];
       number = Number(number);
 
-      let index = array.filter(element => element === number);
+      let index = array.findIndex(element => element === number);
       console.log(index);
-
-      /*if(array.includes(number)){
-        for (let element of array){
-          if(element === number){
-            console.log(array.indexOf(number));
-            break;
-          }
-        }
-      }*/
     }
 
-    command = commands[i].split(' ')[0];
+    command = commands[i]
     i++;
   } 
 }
