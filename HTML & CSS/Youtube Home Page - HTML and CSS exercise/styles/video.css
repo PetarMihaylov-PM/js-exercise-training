@@ -63,3 +63,18 @@
   border-radius: 2px;
 }
 
+.channel-img-hover{
+  display: inline-block;
+  position: relative;
+}
+
+.channel-card-info{
+  width: 250px;
+  height: 80px;
+  border-radius: 8px;
+  background-color: grey;
+  box-shadow: 5px 0px 12px rgba(0, 0, 0, 0.255);
+  position: absolute;
+  bottom: -85px;
+  left: 0;
+}
