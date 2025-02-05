@@ -63,18 +63,30 @@
   border-radius: 2px;
 }
 
-.channel-img-hover{
+.channel-img-hover {
   display: inline-block;
   position: relative;
 }
 
-.channel-card-info{
+.channel-card-info {
+  display: flex;
+  align-items: center;
   width: 250px;
   height: 80px;
   border-radius: 8px;
-  background-color: grey;
+  border: none;
+  background-color: rgb(255, 255, 255);
   box-shadow: 5px 0px 12px rgba(0, 0, 0, 0.255);
   position: absolute;
   bottom: -85px;
   left: 0;
+}
+
+.card-profile-container {
+
+}
+
+.card-profile-img {
+  width: 60px;
+  border-radius: 30px;
 }
