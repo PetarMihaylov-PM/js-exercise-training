@@ -32,9 +32,26 @@ function solve(array, commands) {
     }
 
     else if (execute === 'remove'){
-      let index = command[i].split(' ')[1];
-
+      let index = command.split(' ')[1];
       array.splice(index, 1);
+    }
+
+    else if (execute === 'shift'){
+      let positions = command.split(' ')[1];
+
+      positions = positions % array.length;
+
+      for (let i = 0; i < positions; i++){
+        array.push(array.shift());
+      }
+    }
+
+    else if (execute === 'sumPairs'){
+      for (let i = 0; i < array.length; i+=2) {
+        let sum = array[i] + array[i++];
+
+        array.push(sum);
+      }
     }
 
     command = commands[i]
