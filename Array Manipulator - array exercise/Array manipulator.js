@@ -31,6 +31,12 @@ function solve(array, commands) {
       console.log(index);
     }
 
+    else if (execute === 'remove'){
+      let index = command[i].split(' ')[1];
+
+      array.splice(index, 1);
+    }
+
     command = commands[i]
     i++;
   } 
