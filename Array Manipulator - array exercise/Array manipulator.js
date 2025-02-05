@@ -14,11 +14,9 @@ function solve(array, commands) {
 
     else if (execute === 'addMany'){
       let index = command.split(' ').splice(1, 1);
-      let elements = command.split(' ').splice(2, command.length);
+      let elements = command.split(' ').splice(2).map(Number);
 
-      elements.forEach(element => {
-        array.splice(index, 0, Number(element));
-      });
+      array.splice(index, 0, ...elements);
     }
 
     else if (execute === 'contains') {
@@ -57,13 +55,14 @@ function solve(array, commands) {
       array = doubledArr;
     }
 
-    else if(command === print){
-      console.log(`${array.join(', ')}`);
+    else if(command === 'print'){
+      console.log(`[ ${array.join(', ')} ]`);
       break;
     }
     i++;
   }
 }
 
-solve([1, 2, 4, 5, 6, 7],
-['add 1 8', 'contains 1', 'contains 3', 'print'])
+solve([1, 2, 3, 4, 5],
+  ['addMany 5 9 8 7 6 5', 'contains 15', 'remove 3', 'shift 1', 'print']
+  )
