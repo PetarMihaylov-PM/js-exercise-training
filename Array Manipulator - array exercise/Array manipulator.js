@@ -51,8 +51,14 @@ function solve(array, commands) {
       
       for(let i = 0; i < array.length; i++){
         let sum = array[i] + (array[i+1] || 0);
-        
+        doubledArr.push(sum);
       }
+      array.splice(0, array.length);
+
+      doubledArr.forEach(element => {
+        let index = doubledArr.indexOf(element);
+        array.splice(index, 0, element);
+      })
     }
 
     command = commands[i]
