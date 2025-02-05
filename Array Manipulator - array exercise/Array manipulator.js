@@ -47,10 +47,11 @@ function solve(array, commands) {
     }
 
     else if (execute === 'sumPairs'){
-      for (let i = 0; i < array.length; i+=2) {
-        let sum = array[i] + array[i++];
-
-        array.push(sum);
+      let doubledArr = [];
+      
+      for(let i = 0; i < array.length; i++){
+        let sum = array[i] + (array[i+1] || 0);
+        
       }
     }
 
