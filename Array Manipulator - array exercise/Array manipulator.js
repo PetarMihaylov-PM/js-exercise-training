@@ -1,11 +1,9 @@
 function solve(array, commands) {
  
   let i = 0;
-  let command = commands[i];
-  i++;
   
-  while (command !== 'print'){
-
+  while (i < commands.length){
+    let command = commands[i];
     let execute = command.split(' ')[0];
 
     if (execute === 'add'){
@@ -46,24 +44,25 @@ function solve(array, commands) {
       }
     }
 
-    else if (execute === 'sumPairs'){
+    else if (command === 'sumPairs'){
       let doubledArr = [];
       
       for(let i = 0; i < array.length; i++){
         let sum = array[i] + (array[i+1] || 0);
         doubledArr.push(sum);
       }
+
       array.splice(0, array.length);
 
-      doubledArr.forEach(element => {
-        let index = doubledArr.indexOf(element);
-        array.splice(index, 0, element);
-      })
+      array = doubledArr;
     }
 
-    command = commands[i]
+    else if(command === print){
+      console.log(`${array.join(', ')}`);
+      break;
+    }
     i++;
-  } 
+  }
 }
 
 solve([1, 2, 4, 5, 6, 7],
