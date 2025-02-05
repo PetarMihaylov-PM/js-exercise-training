@@ -9,7 +9,7 @@ function solve(array, commands) {
     if (execute === 'add'){
       let index = command.split(' ')[1];
       let element = command.split(' ')[2];
-      array.splice(index, 0, element);
+      array.splice(index, 0, Number(element));
     }
 
     else if (execute === 'addMany'){
@@ -45,7 +45,7 @@ function solve(array, commands) {
     else if (command === 'sumPairs'){
       let doubledArr = [];
       
-      for(let i = 0; i < array.length; i++){
+      for(let i = 0; i < array.length; i+=2){
         let sum = array[i] + (array[i+1] || 0);
         doubledArr.push(sum);
       }
@@ -63,6 +63,5 @@ function solve(array, commands) {
   }
 }
 
-solve([1, 2, 3, 4, 5],
-  ['addMany 5 9 8 7 6 5', 'contains 15', 'remove 3', 'shift 1', 'print']
-  )
+solve([2, 2, 4, 2, 4],
+  ["add 1 4", "sumPairs", "print"])
