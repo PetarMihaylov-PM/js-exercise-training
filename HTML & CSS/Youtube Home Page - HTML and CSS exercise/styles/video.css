@@ -82,7 +82,7 @@
   left: 0;
   pointer-events: none;
   opacity: 0;
-  transition: opacity 0.2s;
+  transition: opacity 0.15s;
 }
 
 .channel-img-hover:hover .channel-card-info {
