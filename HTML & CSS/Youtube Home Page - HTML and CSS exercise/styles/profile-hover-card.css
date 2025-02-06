@@ -37,7 +37,6 @@
 }
 
 .card-profile-name {
-  font-family: Roboto, Arial;
   font-size: 17px;
   color: black;
   font-weight: 700;
@@ -45,6 +44,5 @@
 }
 
 .card-profile-subscribes {
-  font-family: Roboto, Arial;
   font-size: 14px;
 }

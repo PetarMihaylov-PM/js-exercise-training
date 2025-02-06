@@ -1,4 +1,5 @@
 body {
+  font-family: Roboto, Arial;
   margin: 0;
   margin-bottom: 80px;
   padding-top: 80px;
@@ -8,7 +9,6 @@ body {
 }
 
 p {
-  font-family: Roboto, Arial;
   margin-top: 0;
   margin-bottom: 0;
 }

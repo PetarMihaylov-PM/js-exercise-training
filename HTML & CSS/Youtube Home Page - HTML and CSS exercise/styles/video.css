@@ -23,8 +23,6 @@
   }
 }
 
-
-
 .thumbnail {
   width: 100%;
 }
@@ -71,7 +69,6 @@
 }
 
 .video-time {
-  font-family: Roboto, Arial;
   font-weight: 500;
   background-color: rgba(0, 0, 0, 0.814);
   color: white;
@@ -79,7 +76,7 @@
   right: 8px;
   bottom: 8px;
   font-size: 12px;
-  padding: 4px 4px;
+  padding: 4px;
   border-radius: 2px;
 }
 
