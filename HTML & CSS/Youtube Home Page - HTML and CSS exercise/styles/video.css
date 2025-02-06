@@ -1,9 +1,29 @@
 .video-grid{
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   column-gap: 16px;
   row-gap: 35px;
 }
+
+@media(max-width: 700px){
+  .video-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media(min-width: 751px) and (max-width: 999px){
+  .video-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media(min-width: 1000px){
+  .video-grid{
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+
 
 .thumbnail {
   width: 100%;
