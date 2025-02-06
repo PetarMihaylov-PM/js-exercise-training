@@ -78,12 +78,8 @@
   background-color: rgb(255, 255, 255);
   box-shadow: 5px 0px 12px rgba(0, 0, 0, 0.255);
   position: absolute;
-  bottom: -85px;
+  bottom: -84px;
   left: 0;
-}
-
-.card-profile-container {
-
 }
 
 .card-profile-img {
@@ -91,4 +87,16 @@
   border-radius: 30px;
   margin-left: 12px;
   margin-right: 8px;
+}
+
+.card-profile-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-profile-name {
+  font-family: Roboto, Arial;
+  font-size: 17px;
+  color: black;
+  font-weight: 700;
 }
