@@ -1,0 +1,48 @@
+You will receive a list of Cards on a single line separated by ", ". On the next line, you will receive a number n. On the next n lines, you will receive commands that could be:
+•	"Add, {CardName}": 
+o	Add the given card to the card deck and print: "Card successfully added"
+o	If it is already in the deck, print:  "Card is already in the deck"
+•	"Remove, {CardName}":
+o	Remove the given card from the card deck and print:  "Card successfully removed"
+o	If it is not in the deck, print: "Card not found"
+•	"Remove At, {index}":
+o	Remove the card at the given index and print: "Card successfully removed"
+o	If the index is not in the range of the list, print: "Index out of range"
+•	"Insert, {index}, {CardName}":
+o	Add the card at the given index and print: "Card successfully added"
+o	If the index is out of range, print: "Index out of range"
+o	If the index is in range, but the card is already in the deck, print: "Card is already added"
+Input
+•	The first input line will contain the list of cards.
+•	The second input will be the number of commands – an integer number in the range [0…50].
+•	On the following input lines, you will be receiving commands.
+Output
+•	After going through all the commands, you need to print all cards on a single line separated by ", ".
+JS Examples
+The input will be provided as an array of strings.
+Input															Output
+(["Ace of Diamonds, Queen of Hearts, King of Clubs",
+"3",
+"Add, King of Diamonds",
+"Insert, 2, Jack of Spades",
+"Remove, Ace of Diamonds"])												Card successfully added
+															Card successfully added
+															Card successfully removed
+															Queen of Hearts, Jack of Spades, King of Clubs, King of Diamonds
+
+
+
+(["Two of Clubs, King of Spades, Five of Spades, Jack of Hearts",
+"2",
+"Add, Two of Clubs",
+"Remove, Five of Hearts"])												Card is already in the deck
+															Card not found
+															Two of Clubs, King of Spades, Five of Spades, Jack of Hearts
+
+
+(["Jack of Spades, Ace of Clubs, Jack of Clubs",
+"2",
+"Insert, -1, Queen of Spades",
+"Remove At, 1"])													Index out of range
+															Card successfully removed
+															Jack of Spades, Jack of Clubs
