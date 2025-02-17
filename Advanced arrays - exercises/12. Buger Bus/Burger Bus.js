@@ -9,7 +9,7 @@ function solve (array) {
     let incomeInStotinki = Number(array.shift()) * 100;
     let expensesInStotinki = Number(array.shift()) * 100;
   
-
+    
     if(countDays % 3 === 0 && countDays % 5 !== 0){
       expensesInStotinki += expensesInStotinki * 0.5;
     } 
