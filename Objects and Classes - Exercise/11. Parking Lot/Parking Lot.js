@@ -16,7 +16,6 @@ function solve(array) {
   sorted.sort((a, b) => {
     let number1 = Number(a.split('').splice(2, 4).join(''));
     let number2 = Number(b.split('').splice(2, 4).join(''));
-    console.log(number1,number2)
     return number1 - number2;
   });
 
