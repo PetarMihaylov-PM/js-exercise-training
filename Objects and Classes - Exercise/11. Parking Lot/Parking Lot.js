@@ -12,24 +12,25 @@ function solve(array) {
     }
   });
 
-  let sorted = Array.from(set);
-  sorted.sort((a, b) => {
-    let number1 = Number(a.split('').splice(2, 4).join(''));
-    let number2 = Number(b.split('').splice(2, 4).join(''));
-    return number1 - number2;
-  });
+  const sorted = [...set].sort();
 
-  if(set.size > 0){
-    sorted.forEach(car => {
-      console.log(car)
-    });
-  } else {
+  if(set.size === 0){
     console.log('Parking Lot is Empty');
+  } else {
+    sorted.forEach(car => {
+      console.log(car);
+    });
   }
 }
 
 solve(['IN, CA2844AA',
   'IN, CA1234TA',
   'OUT, CA2844AA',
-  'OUT, CA1234TA']
-  )
+  'IN, CA9999TT',
+  'IN, CA2866HI',
+  'OUT, CA1234TA',
+  'IN, CA2844AA',
+  'OUT, CA2866HI',
+  'IN, CA9876HH',
+  'IN, CA2822UU']  
+  );
