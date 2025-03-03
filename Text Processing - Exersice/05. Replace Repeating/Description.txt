@@ -1,0 +1,5 @@
+Write a function that receives a single string and replace any sequence of the same letters with a single corresponding letter.
+Examples
+Input	Output
+'aaaaabbbbbcdddeeeedssaa'	abcdedsa
+'qqqwerqwecccwd'	qwerqwecwd
