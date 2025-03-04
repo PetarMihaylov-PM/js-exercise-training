@@ -15,3 +15,11 @@ function solve(string){
   console.log(result.reverse().join(', '));
 }
 solve('SplitMe')
+
+//with Regex
+
+function solve2(string){
+  const words = string.match(/[A-Z][a-z]*|[a-z]+/g);
+  console.log(words.join(', '))
+}
+solve2('ThisIsSoAnnoyingToDo');
