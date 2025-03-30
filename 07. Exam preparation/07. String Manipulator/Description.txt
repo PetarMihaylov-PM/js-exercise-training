@@ -1,0 +1,51 @@
+Create a program that executes changes over a string. First, you are going to receive the string, then commands.
+You will be receiving commands until the "End" command. There are six possible commands:
+•	"Translate {char} {replacement}"
+o	Replace all occurrences of the given char with the given replacement, then print the string.
+•	"Includes {substring}"
+o	Check if the current string includes the given substring and print "True" or "False".
+•	"Start {substring}"
+o	Check if the current string starts with the given substring and print "True" or "False".
+•	"Lowercase"
+o	Make the whole string lowercased, then print it.
+•	"FindIndex {char}"
+o	Find the index of the last occurrence of the given char, then print it.
+•	"Remove {startIndex} {count}"
+o	Remove the given count of characters from the string, starting from the start index, then print it.
+Input
+•	On the first line, you are going to receive the string.
+•	On the following lines, until the "End" command is received, you will be receiving commands.
+•	All commands are case-sensitive.
+•	The input will always be valid.
+Output
+•	Print the output of every command in the format described above.
+JS Examples
+The input will be provided as an array of strings.
+Input	Output
+(["//Thi5 I5 MY 5trING!//",
+"Translate 5 s",
+"Includes string",
+"Start //This",
+"Lowercase",
+"FindIndex i",
+"Remove 0 10",
+"End"])	//This Is MY strING!//
+False
+True
+//this is my string!//
+16
+my string!//
+(["*S0ftUni is the B3St Plac3**",
+"Translate 2 o",
+"Includes best",
+"Start the",
+"Lowercase",
+"FindIndex p",
+"Remove 2 7",
+"End"])	*S0ftUni is the B3St Plac3**
+False
+False
+*s0ftuni is the b3st plac3**
+21
+*sis the b3st plac3**
+
