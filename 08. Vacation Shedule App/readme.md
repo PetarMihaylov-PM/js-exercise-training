@@ -23,9 +23,7 @@ The functionality here is the following:
  
 4.	Confirm/Cancel
 •	When the "Confirm" or "Cancel" button is clicked, the list item must be removed,  from the "confirm-list", the ["Next"] button is enabled again you must add new class and add text to <h1> element with id="status".If "Confirm" button is clicked class must be "vacation-confirmed" and text is "Vacation Requested". If "Cancel" button is clicked class must be "vacation-cancelled" and text is "Cancelled Vacation".
-"Confirm" button:
- 
-"Cancel" button:
+
  
 5.	Reload
 •	On clicking the <h1> element with id="status", you must reload the page.
