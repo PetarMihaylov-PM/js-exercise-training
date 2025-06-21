@@ -1,0 +1,138 @@
+Your Task
+Write a class SpaceAgency, which supports the described functionality below:
+class SpaceAgency {
+Implement this class
+}
+
+Functionality
+Constructor
+Should have these 3 properties:
+•	agencyName – string
+•	mission – string
+•	candidates – empty array
+At the initialization of the SpaceAgency class, the constructor accepts the agency name and mission name.
+Hint: You can add more properties to help you finish the task.
+acceptApplications(applications)
+This method adds people to the candidates list. 
+The method takes one argument: applications (array of strings)
+•	Each element in the array is information about a person in the format:
+"{name}-{education}-{flightHours}"
+•	They are separated by dash symbol "-". 
+o	Example: ["Neil Armstrong-Pilot-1200", "Valentina Tereshkova-Engineer-800", "Neil Armstrong-Pilot-1400"…] 
+•	If the name of the current person is already present in the candidates array, update the old flightHours only if the current one is higher.
+•	Otherwise, should add the person with properties: {name, education, flightHours} to the candidates array.
+•	In all cases, you must finally return a string in the following format:
+"You successfully added candidates: {name1}, {name2}, …{nameN}."
+       Note: When returning the string, keep in mind that the different names of persons must be:
+•	Unique - for instance: 
+o	"You successfully added candidates: Neil Armstrong , Valentina Tereshkova , Buzz Aldrin" - is a correctly returned string
+o	"You successfully added candidates: Neil Armstrong , Valentina Tereshkova , Neil Armstrong " - is not a correctly returned string
+•	Separated by comma and space (, )
+chooseForMission(candidateInfo)
+With this method, the agency can choose a candidate for the mission. 
+The method takes one argument: candidateInfo (string)
+•	Тhe string about the selected candidate is in the format: 
+"{name}-{minimumFlightHours}"
+•	Check:
+o	If the name of the current person is not present in candidates array, an error with the following message should be thrown:
+"{name} is not in the candidates list!"
+o	If the candidate's flightHours are less than the required value, throw:
+"{name} does not have enough flight hours for the {mission} mission, minimum required is {minimumFlightHours} hours."
+•	Otherwise:
+o	Replace flightHours with the string "selected".
+o	Finally, return the string in the following format:
+"Congratulations, {name} will participate in the {mission} mission!"
+trainingBonus(name)
+With this method, we check if the candidate qualifies for a training bonus. 
+The method takes one argument: name (string)
+•	Check:
+o	If the submitted name is not present in the candidates array, throw:
+"{name} is not in the candidates list!"
+
+•	Depending on the education recorded:
+o	If the candidate is a "Pilot", return:
+"{name} will be trained by {agencyName} as part of the {mission} mission with a training bonus of $100,000!"
+o	If the candidate is an "Engineer", return:
+"{name} will be trained by {agencyName} as part of the {mission} mission with a training bonus of $120,000!"
+o	If the candidate has a different background:
+"{name} will be trained by {agencyName} as part of the {mission} mission with a training bonus of $80,000!"
+candidatesReport()
+This method returns a list of all candidates.
+•	If there are no candidates in the list, throw an error:
+	"Candidate database is empty!"
+•	Otherwise:
+o	The first line shows:
+"Candidates list:"
+o	On the next lines, show information about each candidate sorted in ascending order of name:
+"{name}-{flightHours}"
+Example
+Input 1
+let agency = new SpaceAgency("NASA", "Mars Exploration");
+console.log(agency.acceptApplications([
+  "Neil Armstrong-Pilot-1200",
+  "Margaret Hamilton-Engineer-800",
+  "Neil Armstrong-Pilot-1400"
+]));
+
+
+Output 1
+You successfully added candidates: Neil Armstrong, Margaret Hamilton.
+
+Input 2
+let agency = new SpaceAgency("NASA", "Mars Exploration");
+console.log(agency.acceptApplications([
+  "Neil Armstrong-Pilot-1200",
+  "Margaret Hamilton-Engineer-800"
+]));
+console.log(agency.chooseForMission("Neil Armstrong-1000"));
+console.log(agency.chooseForMission("Margaret Hamilton-900"));
+
+
+
+Output 2
+You successfully added candidates: Neil Armstrong, Margaret Hamilton.
+Congratulations, Neil Armstrong will participate in the Mars Exploration mission!
+Uncaught Error Error: Margaret Hamilton does not have enough flight hours for the Mars Exploration mission, minimum required is 900 hours
+
+Input 3
+let agency = new SpaceAgency("NASA", "Mars Exploration");
+console.log(agency.acceptApplications([
+  "Neil Armstrong-Pilot-1200",
+  "Margaret Hamilton-Engineer-800"
+]));
+console.log(agency.chooseForMission("Neil Armstrong-1000"));
+console.log(agency.trainingBonus("Neil Armstrong"));
+console.log(agency.trainingBonus("Margaret Hamilton"));
+
+
+Output 3
+You successfully added candidates: Neil Armstrong, Margaret Hamilton.
+Congratulations, Neil Armstrong will participate in the Mars Exploration mission!
+Neil Armstrong will be trained by NASA as part of the Mars Exploration mission with a training bonus of $100,000!
+Margaret Hamilton will be trained by NASA as part of the Mars Exploration mission with a training bonus of $120,000!
+
+Input 4
+let agency = new SpaceAgency("NASA", "Mars Exploration");
+console.log(agency.acceptApplications([
+  "Neil Armstrong-Pilot-1200",
+  "Margaret Hamilton-Engineer-800",
+  "Mae Jemison-Biologist-700"
+]));
+console.log(agency.chooseForMission("Neil Armstrong-1000"));
+console.log(agency.trainingBonus("Mae Jemison"));
+console.log(agency.candidatesReport());
+
+
+
+
+
+Output 4
+You successfully added candidates: Neil Armstrong, Margaret Hamilton, Mae Jemison.
+Congratulations, Neil Armstrong will participate in the Mars Exploration mission!
+Mae Jemison will be trained by NASA as part of the Mars Exploration mission with a training bonus of $80,000!
+Candidates list:
+Mae Jemison-700
+Margaret Hamilton-800
+Neil Armstrong-selected
+
+
