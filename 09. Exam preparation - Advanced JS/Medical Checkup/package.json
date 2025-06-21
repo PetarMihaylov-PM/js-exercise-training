@@ -1,0 +1,17 @@
+{
+  "name": "medical-checkup",
+  "version": "1.0.0",
+  "description": "",
+  "main": "test.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "devDependencies": {
+    "chai": "^5.2.0",
+    "mocha": "^11.7.0"
+  }
+}
