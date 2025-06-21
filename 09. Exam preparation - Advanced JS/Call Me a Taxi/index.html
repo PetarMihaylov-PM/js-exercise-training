@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="./static/css/style.css" />
+    <title>Call me a taxi!</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>Call me a taxi! </h1>
+    </header>
+    <main>
+      <section id="taxi-order">
+        <div class="wrapper">
+          <h1>Taxi Order</h1>
+          <div class="form-wrapper">
+            <form>
+              <label for="pick-up-location">Pick-up Location:</label>
+              <input type="text" id="pick-up-location" name="pick-up-location" />
+
+              <label for="drop-off-location">Drop-off Location:</label>
+              <input type="text" id="drop-off-location" name="drop-off-location" />
+
+              <label for="number-of-passengers">Number of Passengers:</label>
+              <input type="number" id="number-of-passengers" name="number-of-passengers" />
+
+              <label for="date-time">What time for:</label>
+              <input type="datetime-local" id="date-time" name="date-time" />
+
+              <label for="taxi-type">Type of Taxi:</label>
+              <select id="taxi-type" name="taxi-type">
+                <option value="" selected></option>
+                  <option value="Standard">Standard</option>
+                  <option value="Luxury">Luxury</option>
+                  <option value="Minivan">Minivan</option>
+                  <option value="Suv">SUV</option>
+                  <option value="Electric">Electric</option>
+              </select>
+              <button id="order-btn" type="submit">Order</button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <section id="order-info">
+        <div>
+          <div class="wrapper">
+            <h1>Order info</h1>
+            <ul class="order-info-list"></ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="confirm-order">
+        <div>
+          <div class="wrapper">
+            <h1>Confirm Order</h1>
+            <ul class="confirm-order-list"></ul>
+          </div>
+        </div>
+      </section>
+  </main>
+    <section id="status-section">
+      <div>
+        <a id="click">
+          <h1 id="status"></h1>
+        </a>
+      </div>
+    </section>
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+button{
+    font-family: "Bangers", system-ui;
+    letter-spacing: 1px;
+}
+
+body {
+    background-image: url("../img/bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0; 
+    height: 100vh;
+    font-family: "Bangers", system-ui;
+}
+
+main {
+    justify-content: center;
+    margin: 2rem 0 0;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin-bottom: -45px;
+}
+
+header {
+    margin: 0;
+    background-image: url(../img/pattern.png);
+    background-position: center;
+    background-size: cover;
+    background-size: 15%;
+}
+header>h1 {
+    text-align: center;
+    font-size: 3.4rem;
+    letter-spacing: 0.1rem;
+    color: rgb(255, 254, 254);
+text-shadow: 2px 2px rgb(0, 0, 0);
+
+}
+
+.home-container {
+    margin: 0px auto 4px 0;
+    height:1rem;
+    display: flex;
+    top: 0%;
+    left: 50%;
+    text-align: center;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    flex: 1;
+    margin-top: 10rem;
+    
+}
+
+.info>h1 {
+    font-size: 2rem;
+    margin: -10.5rem 0 0px;
+    position: relative;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 0;
+    letter-spacing: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+   color: rgb(230, 199, 2);
+   text-shadow: 1px 1px black;
+}
+
+.wrapper {
+    width: 25vw;
+    height: 52vh;
+    margin: 30px;
+    display: flex;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+    align-items:center;
+    justify-content:baseline;
+    flex-direction: column;
+    background-color: rgba(240, 248, 255, 0.425);
+    border-radius: 10px;
+}
+
+.wrapper > h1 {
+background-image: url(/static/img/pattern.png);
+background-size: 26%;
+  margin-top: -41px;
+  border-radius: 10px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  padding: 5px 15px;
+  width: 20vw;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  text-shadow: 2px 2px black;
+  letter-spacing: 1px;
+}
+.form-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.form-wrapper> form {
+    padding: 1rem;
+}
+
+.form-wrapper> form > input,select {
+    width: 13rem;
+    height: 1.5rem;
+    border-radius: 5px;
+
+}
+#status-section {
+    width: 40vw;
+    height: 12vh;
+    margin:40px auto;
+    display: flex;
+    align-items:center;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+label {
+    display: block;
+    width: 100%;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    font-size: 0.8rem;
+    font-weight: 300;
+    color: #ffffff;
+    text-shadow: 1px 1px black;
+}
+
+#order-btn {
+    display: block;
+    margin-top: 0.6rem;
+    width: 13rem;
+    border-radius: 5px;
+    background-color: rgb(231, 231, 212);
+    font-size:large;
+    font-weight: 700;
+ 
+}
+#order-btn:disabled {
+    cursor:not-allowed;
+}
+
+li {
+    list-style-type: none;
+}
+
+li > article {
+    margin-top: 1.2rem;
+    margin-left: 10px;
+    width: 23vw;
+    border-radius: 10px;
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.829);
+   text-wrap: wrap;
+}
+
+article> h3,p {
+    font-size: 1.2rem;
+    font-weight: 300;
+    padding: 0.1rem 0.6rem;
+   text-align: center;
+}
+
+li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.btn-wrapper{
+    display: flex;
+    gap: 30px;
+}
+
+
+.edit-btn, .continue-btn, .confirm-btn, .cancel-btn {
+    width: 6.5rem;
+    border-radius: 5px;
+    background-color: rgb(236, 236, 211);
+    font-size:large;
+    font-weight: 700;
+    cursor: pointer;
+}
+.taxi-ordered {
+    color: green;
+    text-align: center;
+    background-color: rgb(163, 244, 163);
+    padding: 20px 40px;
+    border-radius: 10px;
+    border: 5px solid green;
+    letter-spacing: 1px;
+}
+.taxi-not-complete {
+    color: red;
+    text-align: center;
+    background-color: rgb(242, 156, 156);
+    padding: 20px 40px;
+    border-radius: 10px;
+    border: 5px solid rgb(255, 0, 0);
+    letter-spacing: 1px;
+}
+
+#click {
+    cursor: pointer;
+}
+
+@media (max-width: 1000px) {
+    body{
+        background-attachment: fixed;
+    }
+    main {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .wrapper{
+        width: 70vh;
+        height: 60vh;
+    }
+    li {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    li article {
+        width: 90vw;
+    }
+}
