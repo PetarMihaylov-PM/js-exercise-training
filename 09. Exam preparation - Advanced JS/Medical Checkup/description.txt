@@ -1,0 +1,109 @@
+Problem 3. Medical Checkup
+Your Task
+Using Mocha and Chai write JS Unit Tests to test a variable named medicalCheckup, which represents an object. You may use the following code as a template:
+describe("Tests …", function() {
+    describe("TODO …", function() {
+        it("TODO …", function() {
+            // TODO: …
+        });
+     });
+     // TODO: …
+});
+Functionality
+The object should have the following functionality:				
+•	scheduleAppointment(patientsCount, costPerPatient, clinicLocation) - A function that accepts three parameters: number, number, and string.
+o	There is a need for validation for the input, in case of submitted invalid parameters or empty string, throw an error:
+"Invalid Information!"
+	If clinicLocation is different from "Sofia", throw an error:
+"The location of this clinic is not in the correct city!"
+o	To be accepted, the appointment must meet these requirements:
+	patientsCount must be greater or equal to 30
+	costPerPatient must be less or equal to 50
+o	If the above conditions are met, return:
+"This clinic meets the requirements, with capacity for {patientsCount} patients at {costPerPatient}$ per checkup."
+o	Otherwise, if the above conditions are not met, return the following message:
+"This clinic does not meet your requirements!"
+•	additionalServices(labTests, consultations, hasInsurance) - A function that accepts three parameters: array, array, and boolean.
+o	Calculate the total cost based on services used:
+	labTests options:
+•	"blood" → $20
+•	"urine" → $15
+	consultations options:
+•	" general" → $100
+•	" specialist" → $200
+o	If the hasInsurance is true, a 20% discount should be applied. Then return the following message:
+"You spend {totalCost}$ for lab tests and consultations with 20% insurance discount!"
+o	Else, return the following message:  
+"You spend {totalCost}$ for lab tests and consultations!"
+o	You need to validate the input, if the labTests, consultations and hasInsurance are not an array, array and Boolean, throw an error: "Invalid Information!"
+
+•	roomDistribution(patients, rooms) - A function that accepts two parameters: number, number.
+o	You need to calculate how many patients per room.
+o	If the patientsPerRoom are  less than 4. return the following message: 
+"There is only {patientsPerRoom} patient in every room, consider rearranging."
+o	Else, return the following message:  
+"You have {rooms} rooms with {patientsPerRoom} patients in each room."
+o	You need to validate the input, if the patients and rooms are not a numbers, or are a negative numbers, throw an error: 
+"Invalid Information!".
+JS Code
+To ease you in the process, you are provided with an implementation that meets all of the specification requirements for the medicalCheckup object:
+medicalCheckup.js
+const medicalCheckup = {
+    scheduleAppointment(patientsCount, costPerPatient, clinicLocation) {
+        if (typeof patientsCount !== 'number' || typeof costPerPatient !== 'number' || typeof clinicLocation !== 'string' || clinicLocation.trim() === '') {
+            throw new Error("Invalid Information!");
+        }
+
+        if (clinicLocation === "Sofia") {
+            if (patientsCount >= 30 && costPerPatient <= 50) {
+                return `This clinic meets the requirements, with capacity for ${patientsCount} patients at ${costPerPatient}$ per checkup.`;
+            } else {
+                return `This clinic does not meet your requirements!`;
+            }
+        } else {
+            throw new Error(`The location of this clinic is not in the correct city!`);
+        }
+    },
+
+    additionalServices(labTests, consultations, hasInsurance) {
+        if (!Array.isArray(labTests) || !Array.isArray(consultations) || typeof hasInsurance !== "boolean") {
+            throw new Error("Invalid Information!");
+        }
+
+        let totalCost = 0;
+
+        labTests.forEach(test => {
+            if (test === "blood") totalCost += 20;
+            else if (test === "urine") totalCost += 15;
+        });
+
+        consultations.forEach(type => {
+            if (type === "general") totalCost += 100;
+            else if (type === "specialist") totalCost += 200;
+        });
+
+        if (hasInsurance) {
+            totalCost *= 0.80;
+            return `You spend ${totalCost}$ for lab tests and consultations with 20% insurance discount!`;
+        } else {
+            return `You spend ${totalCost}$ for lab tests and consultations!`;
+        }
+    },
+
+    roomDistribution(patients, rooms) {
+        if (typeof patients !== "number" || patients <= 0 || typeof rooms !== "number" || rooms <= 0) {
+            throw new Error("Invalid Information!");
+        }
+
+        let patientsPerRoom = Math.round(patients / rooms);
+
+        if (patientsPerRoom < 4) {
+            return `There is only ${patientsPerRoom} patient in every room, consider rearranging.`;
+        } else {
+            return `You have ${rooms} rooms with ${patientsPerRoom} patients in each room.`;
+        }
+    }
+};
+
+Submission
+Submit your tests inside a describe() statement, as shown above.
