@@ -1,8 +1,10 @@
 import { get, post, put, del } from './request.js';
 
 const endpoints = {
-  all: '/data/collection',
-  byId: '/data/collection/',
+  all: '/data/shows?sortBy=_createdOn%20desc',
+  collection: '/data/shows',
+  byId: '/data/shows',
+  search: (query) => `/data/shows?where=title%20LIKE%20%22${query}%22`
 }
 
 export async function getAll() {
