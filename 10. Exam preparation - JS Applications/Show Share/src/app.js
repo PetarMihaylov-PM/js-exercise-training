@@ -9,5 +9,7 @@ page(addRender);
 //bind project URLs to view handlers
 page('/', homeView);
 
-updateNav();
+
 page.start();
+
+updateNav();
