@@ -1,5 +1,6 @@
 import { register } from "../data/user.js";
 import { html } from "../lib.js";
+import { updateNav } from "../utils/utils.js";
 
 const registerTemp = (onRegister) => html`
   <section id="register">
@@ -35,6 +36,8 @@ export function renderRegister(ctx) {
       }
       
       await register(email, password);
+
+      updateNav();
 
       ctx.page.redirect('/');
 
