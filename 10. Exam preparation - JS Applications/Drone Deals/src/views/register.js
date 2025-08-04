@@ -1,3 +1,4 @@
+import { register } from "../data/user.js";
 import { html } from "../lib.js";
 
 const registerTemp = (onRegister) => html`
@@ -16,9 +17,29 @@ const registerTemp = (onRegister) => html`
 `;
 
 export function renderRegister(ctx) { 
-  ctx.render(registerTemp());
+  ctx.render(registerTemp(onRegister));
 
-  async function onRegister(params) {
-    
+  async function onRegister(event) {
+    event.preventDefault();
+
+    const formData = new FormData(event.currentTarget);
+
+    const email = formData.get('email');
+    const password = formData.get('password');
+    const rePassword = formData.get('re-password');
+
+    try {
+
+      if(!email || !password || !rePassword || password !== rePassword){
+        throw new Error("Passwords don't match");
+      }
+      
+      await register(email, password);
+
+      ctx.page.redirect('/');
+
+    } catch (error) {
+      alert(error.message);
+    }
   }
 }

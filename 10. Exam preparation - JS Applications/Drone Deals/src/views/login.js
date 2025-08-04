@@ -1,5 +1,6 @@
 import { login } from "../data/user.js";
 import { html } from "../lib.js";
+import { updateNav } from "../utils/utils.js";
 
 const loginTemp = (onLogin) => html`
   <section id="login">
@@ -36,6 +37,8 @@ export function renderLogin(ctx) {
       }
 
       await login(email, password);
+      
+      updateNav();
 
       ctx.page.redirect('/');
 
