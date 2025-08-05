@@ -1,8 +1,8 @@
-import { getDroneById } from "../data/data.js";
-import { html } from "../lib.js";
+import { deleteDrone, getDroneById } from "../data/data.js";
+import { html, nothing } from "../lib.js";
 import { getUserData } from "../utils/utils.js";
 
-const detailTemp = (drone, isOwner) => html`
+const detailTemp = (drone, isOwner, onDelete) => html`
   <section id="details">
     <div id="details-wrapper">
       <div>
@@ -20,10 +20,10 @@ const detailTemp = (drone, isOwner) => html`
           <p class="phone-number">Phone: ${drone.phone}</p>
         </div>
         <!--Edit and Delete are only for creator-->
-        ${ isOwner ? html `<div class="buttons">
-          <a href="" id="edit-btn">Edit</a>
-          <a href="" id="delete-btn">Delete</a>
-        </div>` : html``}
+        ${ isOwner ? html`<div class="buttons">
+          <a href="/edit/${drone._id}" id="edit-btn">Edit</a>
+          <a href="javascript:void(0)" id="delete-btn" @click=${onDelete}>Delete</a>
+        </div>` : nothing}
       </div>
     </div>
   </section>
@@ -33,11 +33,21 @@ export async function renderDetails(ctx) {
 
   const id = ctx.params.id;
   
+  
+  const drone = await getDroneById(id);
   const userData = getUserData();
 
-  const drone = await getDroneById(id);
+  const isOwner = userData && drone._ownerId === userData.id;
 
-  const isOwner = userData && drone._id === userData.id;
+  ctx.render(detailTemp(drone, isOwner, onDelete));
 
-  ctx.render(detailTemp(drone, isOwner));
+  async function onDelete() {
+    const choise = confirm('Are you sure you want to delete this offer?');
+
+    if(choise){
+      await deleteDrone(drone._id);
+
+      ctx.page.redirect('/catalog');
+    }
+  }
 }
