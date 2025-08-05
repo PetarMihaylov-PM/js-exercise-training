@@ -8,6 +8,7 @@ import { updateNav } from './utils/utils.js';
 import { renderCatalog } from './views/catalog.js';
 import { renderDetails } from './views/details.js';
 import { renderCreate } from './views/create.js';
+import { renderEdit } from './views/edit.js';
 
 updateNav();
 
@@ -27,6 +28,7 @@ page('/register', renderRegister);
 page('/catalog', renderCatalog);
 page('/catalog/:id', renderDetails);
 page('/create', renderCreate);
+page('/edit/:id', renderEdit);
 
 
 page.start();
