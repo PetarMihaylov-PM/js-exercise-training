@@ -6,7 +6,7 @@ import { del, get, post, put } from "./request.js";
 //TODO modify endpoints according to description
 const endpoints = {
   recent: '/data/drones?sortBy=_createdOn%20desc',
-  create: '/data/drones/',
+  create: '/data/drones',
   byId: '/data/drones/',
 }
 
@@ -20,21 +20,8 @@ export async function getDroneById(id) {
 
 
 //TODO enter record properties
-export async function createDrone(
-  model, imageUrl, price, 
-  condition, weight,
-  phone, description ) {
-
-  return post(endpoints.create, {
-  model,
-  imageUrl, 
-  price, 
-  condition,
-  weight,
-  phone,
-  description
-} 
-);
+export async function createDrone(data) {
+  return post(endpoints.create, data);
 }
 
 export async function updateDrone(id, {

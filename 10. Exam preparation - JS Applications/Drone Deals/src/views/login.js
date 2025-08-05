@@ -1,5 +1,6 @@
 import { login } from "../data/user.js";
 import { html } from "../lib.js";
+import { showError } from "../utils/notification.js";
 import { updateNav } from "../utils/utils.js";
 
 const loginTemp = (onLogin) => html`
@@ -43,7 +44,7 @@ export function renderLogin(ctx) {
       ctx.page.redirect('/');
 
     }catch (err){
-      alert(err.message);
+      showError(err.message);
     }
   }
 

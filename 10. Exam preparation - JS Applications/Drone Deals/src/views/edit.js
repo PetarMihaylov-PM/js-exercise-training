@@ -49,7 +49,7 @@ export async function renderEdit(ctx) {
         throw new Error('All fields are required!');
       }
 
-      await updateDrone(droneData._id, {model, imageUrl, price, weight, phone, condition, description})
+      await updateDrone(id, {model, imageUrl, price, weight, phone, condition, description})
 
       ctx.page.redirect(`/catalog/${id}`);
 

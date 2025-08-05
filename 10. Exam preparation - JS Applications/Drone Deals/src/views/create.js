@@ -47,15 +47,7 @@ export function renderCreate(ctx) {
         throw new Error('All fields are required!');
       }
 
-      await createDrone(
-          model, 
-          imageUrl, 
-          price, 
-          weight,
-          phone,
-          condition, 
-          description,
-        );
+      await createDrone({model, imageUrl, price, condition, weight, phone, description});
 
       ctx.page.redirect('/catalog');
 
