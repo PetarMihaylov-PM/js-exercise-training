@@ -7,6 +7,7 @@ import { logout } from './data/user.js';
 import { updateNav } from './utils/utils.js';
 import { renderCatalog } from './views/catalog.js';
 import { renderDetails } from './views/details.js';
+import { renderCreate } from './views/create.js';
 
 updateNav();
 
@@ -17,6 +18,7 @@ document.getElementById('logoutBtn').addEventListener('click', () => {
 });
 
 page(addRender);
+
 //TODO Bind URLS 
 
 page('/', homeView);
@@ -24,6 +26,7 @@ page('/login', renderLogin);
 page('/register', renderRegister);
 page('/catalog', renderCatalog);
 page('/catalog/:id', renderDetails);
+page('/create', renderCreate);
 
 
 page.start();

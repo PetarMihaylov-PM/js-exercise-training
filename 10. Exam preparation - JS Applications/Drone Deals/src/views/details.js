@@ -6,7 +6,7 @@ const detailTemp = (drone, isOwner, onDelete) => html`
   <section id="details">
     <div id="details-wrapper">
       <div>
-        <img id="details-img" src="${drone.imageUrl}" alt="example1" />
+        <img id="details-img" src="${drone.imageUrl}" />
         <p id="details-model">${drone.model}</p>
       </div>
       <div id="info-wrapper">
