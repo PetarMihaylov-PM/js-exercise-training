@@ -31,6 +31,6 @@ const droneCard = (drone) => html`
 
 export async function renderCatalog(ctx) {
   const drones = await getAllDrones();
-  console.log(drones);
+  
   ctx.render(catalogTemp(drones)); 
 }

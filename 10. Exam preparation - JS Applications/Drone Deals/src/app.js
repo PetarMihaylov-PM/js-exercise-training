@@ -6,6 +6,7 @@ import { renderRegister } from './views/register.js';
 import { logout } from './data/user.js';
 import { updateNav } from './utils/utils.js';
 import { renderCatalog } from './views/catalog.js';
+import { renderDetails } from './views/details.js';
 
 updateNav();
 
@@ -22,5 +23,7 @@ page('/', homeView);
 page('/login', renderLogin);
 page('/register', renderRegister);
 page('/catalog', renderCatalog);
+page('/catalog/:id', renderDetails);
+
 
 page.start();
