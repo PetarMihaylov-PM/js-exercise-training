@@ -11,15 +11,15 @@ const navbarTemplate = (hasUser) => html`
   ${hasUser ? 
     html`
       <div class="user">
-        <a href="#">Add Show</a>
-        <a href="#">Logout</a>
+        <a href="/create">Add Show</a>
+        <a href="/logout">Logout</a>
       </div>
     ` 
     : 
     html`
       <div class="guest">
-        <a href="#">Login</a>
-        <a href="#">Register</a>
+        <a href="/login">Login</a>
+        <a href="/register">Register</a>
       </div>
     `}
 `;

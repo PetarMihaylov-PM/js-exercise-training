@@ -16,7 +16,7 @@ const loginTemp = (onLogin) => html`
         />
         <button type="submit">login</button>
         <p class="message">
-          Not registered? <a href="#">Create an account</a>
+          Not registered? <a href="/register">Create an account</a>
         </p>
       </form>
     </div>
@@ -35,8 +35,6 @@ export function renderLogin(ctx) {
     const data = Object.fromEntries(formData.entries());
 
     const { email, password } = data;
-
-    
 
     try {
 
