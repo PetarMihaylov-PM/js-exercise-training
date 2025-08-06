@@ -1,4 +1,4 @@
-import { html } from "lit-html";
+import { html } from "../lib.js"
 
 const homeTemp = () => html`
   <section id="home">
@@ -10,8 +10,9 @@ const homeTemp = () => html`
       Your next binge-worthy series is just a click away!
     </h1>
   </section>
-`;
+`
 
-export function homeView(ctx){
+
+export function renderHome(ctx) {
   ctx.render(homeTemp());
 }
