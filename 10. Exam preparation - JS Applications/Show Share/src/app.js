@@ -1,5 +1,7 @@
 import { page } from './lib.js';
 import { addRender } from './utils/render.js';
+import { renderDashboard } from './views/dashboard.js';
+import { renderDetails } from './views/details.js';
 import { renderHome } from './views/home.js';
 import { renderLogin } from './views/login.js';
 import { renderLogout } from './views/logout.js';
@@ -15,5 +17,7 @@ page('/', renderHome);
 page('/login', renderLogin);
 page('/logout', renderLogout);
 page('/register', renderRegister);
+page('/dashboard', renderDashboard);
+page('/dashboard/:id', renderDetails);
 
 page.start();

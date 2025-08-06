@@ -5,8 +5,9 @@ import { del, get, post, put } from "./request.js";
 
 //TODO modify endpoints according to description
 const endpoints = {
-  all: '/data/drones',
-  byId: '/data/drones/',
+  all: '/data/shows?sortBy=_createdOn%20desc',
+  byId: '/data/shows/',
+  create: '/data/shows'
 }
 
 export async function getAll() {
@@ -19,8 +20,8 @@ export async function getById(id) {
 
 
 //TODO enter record properties
-export async function create(prop1, prop2) {
-  return post(endpoints.all, {prop1, prop2});
+export async function create(data) {
+  return post(endpoints.create, {data});
 }
 
 export async function update(id, record) {

@@ -4,8 +4,8 @@ import { getUserData } from "../utils/utils.js";
 
 const navbarTemplate = (hasUser) => html`
   <div>
-    <a href="#">TV Shows</a>
-    <a href="#">Search</a>
+    <a href="/dashboard">TV Shows</a>
+    <a href="/search">Search</a>
   </div>
 
   ${hasUser ? 
