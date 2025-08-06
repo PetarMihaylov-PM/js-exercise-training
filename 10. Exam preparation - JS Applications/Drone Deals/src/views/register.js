@@ -1,5 +1,6 @@
 import { register } from "../data/user.js";
 import { html } from "../lib.js";
+import { showError } from "../utils/notification.js";
 import { updateNav } from "../utils/utils.js";
 
 const registerTemp = (onRegister) => html`
@@ -42,7 +43,7 @@ export function renderRegister(ctx) {
       ctx.page.redirect('/');
 
     } catch (error) {
-      alert(error.message);
+      showError(error.message);
     }
   }
 }

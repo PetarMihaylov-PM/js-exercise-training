@@ -1,5 +1,6 @@
 import { getDroneById, updateDrone } from "../data/data.js";
 import { html } from "../lib.js";
+import { showError } from "../utils/notification.js";
 
 const editTemp = (droneData, onEdit) => html`
   <section id="edit">
@@ -54,7 +55,7 @@ export async function renderEdit(ctx) {
       ctx.page.redirect(`/catalog/${id}`);
 
     } catch (err) {
-      alert(err.message);
+      showError(err.message);
     }
 
     

@@ -1,5 +1,6 @@
 import { createDrone } from "../data/data.js";
 import { html } from "../lib.js";
+import { showError } from "../utils/notification.js";
 
 const createTemp = (onCreate) => html`
   <section id="create">
@@ -52,7 +53,7 @@ export function renderCreate(ctx) {
       ctx.page.redirect('/catalog');
 
     } catch (err) {
-      alert(err.message);
+      showError(err.message);
     }
   }
 }
