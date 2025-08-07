@@ -36,7 +36,7 @@ export async function renderDetails(ctx) {
 
   const userData = await getUserData();
 
-  const isOwner = true;//userData && userData.id === currentShow._id;
+  const isOwner = userData && userData.id === currentShow._ownerId;
 
   ctx.render(detailsTemp(currentShow, isOwner, onDelete));
 
