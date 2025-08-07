@@ -9,6 +9,7 @@ import { renderLogin } from './views/login.js';
 import { renderLogout } from './views/logout.js';
 import { renderNavbar } from './views/navbar.js';
 import { renderRegister } from './views/register.js';
+import { renderSearch } from './views/search.js';
 
 page(addRender);
 renderNavbar();
@@ -23,6 +24,7 @@ page('/dashboard', renderDashboard);
 page('/dashboard/:id', renderDetails);
 page('/create', renderCreate);
 page('/edit/:id', renderEdit);
+page('/search', renderSearch);
 
 
 page.start();

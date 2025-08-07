@@ -7,7 +7,7 @@ import { del, get, post, put } from "./request.js";
 const endpoints = {
   all: '/data/shows?sortBy=_createdOn%20desc',
   byId: '/data/shows/',
-  create: '/data/shows'
+  create: '/data/shows',
 }
 
 export async function getAll() {
@@ -18,6 +18,9 @@ export async function getById(id) {
   return get(endpoints.byId + id);
 }
 
+export async function searchShow(query) {
+  return get(`/data/shows?where=title%20LIKE%20%22${query}%22`);
+}
 
 //TODO enter record properties
 export async function create(data) {
