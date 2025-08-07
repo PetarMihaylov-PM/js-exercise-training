@@ -1,5 +1,6 @@
 import { page } from './lib.js';
 import { addRender } from './utils/render.js';
+import { renderCreate } from './views/create.js';
 import { renderDashboard } from './views/dashboard.js';
 import { renderDetails } from './views/details.js';
 import { renderHome } from './views/home.js';
@@ -19,5 +20,7 @@ page('/logout', renderLogout);
 page('/register', renderRegister);
 page('/dashboard', renderDashboard);
 page('/dashboard/:id', renderDetails);
+page('/create', renderCreate);
+
 
 page.start();

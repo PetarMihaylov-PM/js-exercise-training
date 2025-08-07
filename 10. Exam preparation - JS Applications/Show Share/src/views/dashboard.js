@@ -1,5 +1,5 @@
 import { getAll } from "../data/data.js";
-import { html, nothing } from "../lib.js";
+import { html } from "../lib.js";
 
 const dashboardTemp = (data) => html`
   <h2>Users Recommendations</h2>
@@ -16,7 +16,10 @@ const dashboardTemp = (data) => html`
             <a class="details-btn" href="/dashboard/${show._id}">Details</a>
           </div>
         </div>
-      `) : nothing}
+      `) : 
+      html`
+      <h2 id="no-show">No shows Added.</h2>
+      `}
   </section>
 `;
 
