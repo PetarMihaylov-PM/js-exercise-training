@@ -21,7 +21,7 @@ export async function getById(id) {
 
 //TODO enter record properties
 export async function create(data) {
-  return post(endpoints.create, {data});
+  return post(endpoints.create, data);
 }
 
 export async function update(id, record) {

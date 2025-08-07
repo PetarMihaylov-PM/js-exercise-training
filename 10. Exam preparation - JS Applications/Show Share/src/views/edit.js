@@ -11,28 +11,28 @@ const editTemp = (onSubmit, currentShow) => html`
           name="title"
           id="title"
           placeholder="TV Show title"
-          @value=${currentShow.title}
+          .value=${currentShow.title}
         />
         <input
           type="text"
           name="image-url"
           id="image-url"
           placeholder="Image URL"
-          @value=${currentShow.imageUrl}
+          .value=${currentShow.imageUrl}
         />
         <input
         type="text"
         name="genre"
         id="genre"
         placeholder="Genre"
-        @value=${currentShow.genre}
+        .value=${currentShow.genre}
       />
       <input
       type="text"
       name="country"
       id="country"
       placeholder="Country"
-      @value=${currentShow.country}
+      .value=${currentShow.country}
     />
         <textarea
           id="details"
@@ -48,13 +48,17 @@ const editTemp = (onSubmit, currentShow) => html`
 `;
 
 export async function renderEdit(ctx){
-  ctx.render(editTemp(onSubmit, currentShow));
 
   const id = ctx.params.id;
 
   const currentShow = await getById(id);
 
+  ctx.render(editTemp(onSubmit, currentShow));
+
   async function onSubmit(e) {
+
+    e.preventDefault();
+
     const formData = new FormData(e.currentTarget);
 
     const title = formData.get('title');
@@ -77,7 +81,7 @@ export async function renderEdit(ctx){
         details
       });
 
-      ctx.page.redirect('/dashboard');
+      ctx.page.redirect(`/dashboard/${id}`);
       
     } catch (error) {
       alert(error.message);
