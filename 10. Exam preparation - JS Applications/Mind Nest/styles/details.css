@@ -1,0 +1,77 @@
+#details-wrapper {
+  background-color: rgb(192, 192, 192);
+  margin: 30px auto ;
+  height: 70vh;
+  width: 70vw;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+   background: rgb(3,3,3);
+  background: radial-gradient(circle, rgb(137, 211, 230) 24%, rgb(234, 236, 236) 87%);
+  border-radius: 30px;
+margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+#details-wrapper img {
+  display: block;
+  height: 45vh;
+  width: 40vh;
+  border-radius: 10px;
+  border: 2px solid rgb(0, 0, 0) ;
+}
+
+#details-title {
+  color: white;
+text-shadow: 2px 2px black;
+font-size: 36px;
+background-color: black;
+padding: 5px 20px;
+border-radius: 20px;
+}
+#details-description {
+  width: 95%;
+  margin: 30px auto;
+  height: auto;
+  text-align: center;
+  font-size: 40px;
+  background-color: #000000;
+  padding: 10px 0px;
+  border-radius: 20px;
+}
+
+
+
+
+p {
+  text-align: center;
+  color: #ffffff;
+text-shadow: 1px 1px black;
+letter-spacing: 1px;
+}
+
+
+
+#action-buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5px;
+  
+}
+
+#action-buttons a {
+  text-decoration: none;
+  margin: auto 50px;
+  margin-bottom: 10px;
+  font-size: 36px;
+  width: 130px;
+  text-align: center;
+  color: white;
+  background: rgb(16, 174, 214);
+  border-radius: 5px;
+}
+#action-buttons a:hover {
+  background: #ffffff;
+  color: black;
+}

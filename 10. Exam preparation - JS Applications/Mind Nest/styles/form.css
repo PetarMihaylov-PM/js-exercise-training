@@ -1,0 +1,144 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+
+.form {
+
+  max-width: 440px;
+  margin: 60px auto;
+  padding: 35px;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+   background: rgb(3,3,3);
+  background: radial-gradient(circle, rgb(137, 211, 230) 24%, rgb(234, 236, 236) 87%);
+  border-radius: 30px;
+}
+
+.form h2 {
+  margin-bottom: 50px;
+  font-size: 36px;
+  color: rgb(0, 221, 250);
+  letter-spacing: 5px;
+  text-shadow: 2px 2px black;
+}
+
+.form input{
+  border-radius: 10px;
+  outline: 0;
+  background: #ffffff;
+  width: 100%;
+  height: 50px;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+font-size: 18px;
+}
+
+
+.form select{
+  border-radius: 10px;
+  color: gray;
+  outline: 0;
+  background: #ffffff;
+  width: 100%;
+  height: 50px;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 18px;
+}
+
+.form textarea {
+  background: #ffffff;
+  border-radius: 10px;
+  border: 1px solid rgb(206, 206, 206);
+  width: 99%;
+  max-width: 99%;
+  min-width: 99%;
+  min-height: 50px;
+  margin-bottom: 10px;
+  font-size: 18px;
+
+}
+.form button {
+  font-family: 'Alkalami', serif;
+  font-family: 'Kaushan Script', cursive;
+  text-transform: uppercase;
+  outline: 0;
+  background: rgba(43, 180, 180, 0.86);
+  width: 80%;
+  border: 0;
+  padding: 15px;
+  color: #ffffff;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  
+}
+.form button:hover,
+.form button:active,
+.form button:focus {
+  background: #5a027a;
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  max-width: 300px;
+  margin: 0 auto;
+}
+.container:before,
+.container:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.form .message {
+  margin: 15px 0 0;
+  color: #6b6767;
+  font-size: 17px;
+}
+.form .message a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 18px;
+
+}
+
+.no-result {
+  margin-top: 8rem;
+  font-size: 30px;
+}
+h4 {
+  font-size: 33px;
+  background-color: rgba(34, 32, 32, 0.601);
+  border-radius: 33px;
+  color: white;
+  margin-top: -5px;
+}
+
+#result-heading{
+/* background-color: black; */
+padding: 20px 40px;
+font-size: 40px;
+}
+
+.form .search-form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 20px;
+  margin-top: -20px;
+}
+
+#search .form {
+  width: 70vw;
+  height: 20vh;
+  margin-top: -10px;
+  
+}
+

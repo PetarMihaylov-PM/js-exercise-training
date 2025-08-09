@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+#tips-dashboard {
+  display: flex;
+  align-items: center;
+  justify-content:center ;
+  flex-wrap: wrap;
+  margin-top: -60px;
+}
+
+
+
+ h2 {
+  text-align: center;
+  font-size: 50px;
+  color: rgb(240, 0, 0);
+border-radius: 12px;
+margin-top: -10px;
+
+}
+
+.tip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 28vw;
+  height: 73vh;
+  padding-bottom: 1rem;
+  margin: 20px auto;
+  padding: 10px;
+  background: rgb(3,3,3);
+  background: radial-gradient(circle, rgb(137, 211, 230) 24%, rgb(234, 236, 236) 87%);
+  border-radius: 30px;
+box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.tip:hover{
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+.empty{
+  color: rgb(255, 255, 255);
+  width: 53vw;
+text-align: center;
+font-size: 52px;
+letter-spacing: 8px;
+background-color: rgba(0, 60, 75, 1);
+margin-bottom: 100px;
+border-radius: 10px;
+
+}
+
+.tip img {
+  width: 15vw;
+  height:15vw; 
+  border-radius: 5px;
+  border: 2px solid rgb(0, 0, 0) ;
+}
+
+
+
+.details-btn {
+  margin-top: 4px;
+  text-decoration: none;
+  font-size: 36px;
+  text-shadow: 1px 1px black;
+  font-weight: 700;
+  width: 160px;
+  border-radius: 3px;
+  text-align: center;
+  color: white;
+  background:  rgb(5, 171, 232);
+}
+
+.tip-info p {
+color: rgba(0, 60, 75, 1);
+  font-size: 36px;
+  padding: 0;
+  margin: 15px;
+}
+
+.heading {
+width: 33vw;
+text-align: center;
+font-size: 52px;
+letter-spacing: 8px;
+background-color: rgba(255, 255, 255, 0.866);
+border-radius: 20px;
+margin-left: 33vw;
+margin-bottom: 50px;
+margin-top: 0;
+color: rgba(0, 60, 75, 1);
+}
+
+.title{
+  color: white;
+text-shadow: 2px 2px black;
+font-size: 30px;
+background-color: black;
+padding: 5px 20px;
+border-radius: 20px;
+}
